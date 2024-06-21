@@ -1,0 +1,12 @@
+label[for="file_input"] {
+    display: none;
+}
+#file_input {
+    display: none;
+}
+#file_output {
+    display: none;
+}
+.pred-img {
+    width: 600px;
+}
