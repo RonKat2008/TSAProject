@@ -8,5 +8,27 @@ label[for="file_input"] {
     display: none;
 }
 .pred-img {
-    width: 600px;
+    width: 70%;
+    padding-left: 30%;
+
+}
+.golden-button {
+    background-color: #c2a258; /* Custom golden color */
+    color: white; /* Text color */
+    font-family: Raleway, sans-serif;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none; /* Remove underlines */
+    width: 75%;
+    margin-left: 12.5%;
+    margin-top: 20px;
+}
+
+.golden-button:hover {
+    background-color: #a5884a; /* Slightly darker golden color */
+    color: white; /* Ensure text remains white */
 }

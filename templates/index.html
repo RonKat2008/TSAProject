@@ -1,202 +1,229 @@
 <!DOCTYPE html>
-<html data-bs-theme="light" lang="en">
+<html data-bs-theme="light" lang="en" data-bss-forced-theme="light">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/style.css')}}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <title>Neuro Segmenter 3D</title>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "Neuro Segmenter 3D",
+            "url": "https://neurosegmenter3d.bss.design/"
+        }
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap-icons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap-icons.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/swiper-icons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/vendor/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/vendor/bootstrap-icons/bootstrap-icons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/vendor/aos/aos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/vendor/glightbox/css/glightbox.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/vendor/swiper/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/filepond.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/css/filepond.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/css/aos.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/css/vendor/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/css/vendor/bootstrap-icons/bootstrap-icons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/css/vendor/swiper/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/css/bootstrap/css/bootstrap.min.css') }}">
 </head>
-<body>
-    <nav class="navbar navbar-expand-md sticky-top py-3 navbar-dark" id="mainNav">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"><span class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex justify-content-center align-items-center me-2 bs-icon"><img src="{{url_for('static', filename='images/23-233687_psychology-brain-png-brain-free-icon-png-transparent-removebg-preview.png')}}" width="41" height="43"></span><span>Neuro Segmenter 3D&nbsp;</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-1" style="margin-right: 1px;padding-right: 225px;">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"></li>
-                    <li class="nav-item"><a class="nav-link" href="Project.html">Project</a></li>
-                    
-                    <li class="nav-item"><a class="nav-link" href="contacts.html">Contacts</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <header class="bg-dark">
-        <div class="container pt-4 pt-xl-5">
-            <div class="row pt-5">
-                <div class="col-md-8 col-xl-6 text-center text-md-start mx-auto">
-                    <div class="text-center">
-                        <p class="fw-bold text-success mb-2">Neuro Segmenter 3D:&nbsp; TSA 2023 - 2024 Software Development</p>
-                        <h1 class="fw-bold">AI Brain Segmentation Model</h1>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-10 mx-auto">
-                    <div class="position-relative" style="display: flex;flex-wrap: wrap;justify-content: flex-end;">
-                        <div style="position: relative;flex: 0 0 45%;transform: translate3d(-15%, 35%, 0);"><img class="img-fluid" data-bss-parallax="" data-bss-parallax-speed="0.8" src="{{url_for('static', filename='images/I.png')}}"></div>
-                        <div style="position: relative;flex: 0 0 45%;transform: translate3d(-5%, 20%, 0);"><img class="img-fluid" data-bss-parallax="" data-bss-parallax-speed="0.4" src="{{url_for('static', filename='images/image.png')}}"></div>
-                        <div style="position: relative;flex: 0 0 60%;transform: translate3d(0, 0%, 0);"><img class="img-fluid" data-bss-parallax="" data-bss-parallax-speed="0.25" src="{{url_for('static', filename='images/R.png')}}"></div>
-                    </div>
+
+<body class="index-page">
+    <header id="header" class="header fixed-top">
+        <div class="container">
+            <div class="d-flex border rounded-pill branding align-items-cente" style="justify-content:center;align-items:center;height:43px;margin-top:17px;min-height:25px;">
+                <div class="container d-flex justify-content-between align-items-center position-relative" style="text-align:right;"><a class="d-flex align-items-center me-auto logo me-xl-0" href="index.html" style="text-decoration:none;">
+                        <h1 data-bss-hover-animate="pulse" class="sitename" style="font-family:Raleway, sans-serif;padding-left:27px;font-size:20px;text-decoration:none;">Neuro Segmenter 3D</h1>
+                    </a>
+                    <nav id="navmenu" class="navmenu">
+                        <ul>
+                            <li data-bss-hover-animate="pulse" style="font-family:Raleway, sans-serif;"><a href="#hero" style="text-decoration:none;font-family:Raleway, sans-serif;font-weight:bold;">Home<br></a></li>
+                            <li data-bss-hover-animate="pulse"><a href="About.html" style="text-decoration:none;font-family:Raleway, sans-serif;font-weight:bold;">About</a></li>
+                            <li data-bss-hover-animate="pulse" style="font-family:Raleway, sans-serif;font-weight:bold;"><a href="OurModel.html" style="text-decoration:none;font-family:Raleway, sans-serif;font-weight:bold;">Our Model</a></li>
+                            <li data-bss-hover-animate="pulse" style="font-family:Raleway, sans-serif;font-weight:bold;"><a href="References.html" style="text-decoration:none;font-family:Raleway, sans-serif;font-weight:bold;">Documentation</a></li>
+                            <li data-bss-hover-animate="pulse" style="font-family:Raleway, sans-serif;font-weight:bold;padding-right:20px;"><a href="#contact" style="text-decoration:none;font-family:Raleway, sans-serif;font-weight:bold;">Contact</a></li>
+                        </ul><i class="d-xl-none mobile-nav-toggle bi bi-list"></i>
+                    </nav>
                 </div>
             </div>
         </div>
     </header>
-    <section class="py-5"></section>
-    <section>
-        <div class="container bg-dark py-5">
-            <div class="row">
-                <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <p class="fw-bold text-success mb-2">3D Segmenter&nbsp;</p>
-                    <h3 class="fw-bold">Key Components</h3>
+    <main class="main">
+        <section id="hero" class="hero section">
+            <div class="container">
+                <h2 class="fs-1 text-center" data-aos="zoom-out-up" data-aos-duration="1100" style="font-size:69px;font-family:Raleway, sans-serif;">NEURO SEGMENTER <span>3D</span></h2>
+                <p class="text-center" data-aos="zoom-out-up" data-aos-duration="1100" data-aos-delay="350" style="font-family:Raleway, sans-serif;">A Brain Segmentation Model</p>
+            </div><img src="{{ url_for('static', filename='images/brain.jpg') }}" alt="asdasd">
+        </section>
+        <section id="about" class="about section">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row gy-4">
+                    <div class="col-lg-6 order-1 order-lg-2"><img class="img-fluid about-img" src="{{ url_for('static', filename='images/clipboard-image-2.png') }}" alt=""></div>
+                    <div class="col-lg-6 order-2 order-lg-1 content">
+                        <h3>Neuro Segmenter 3D Project Summary</h3>
+                        <ul></ul>
+                        <p>Neuro Segmenter 3D is an advanced AI tool designed to revolutionize the analysis of MRI brain scans by accurately detecting and diagnosing brain tumors. Utilizing state-of-the-art neural networks and machine learning algorithms, it automates the segmentation of brain images, providing high-precision results essential for medical and research applications. The model's key features include high precision segmentation, automated analysis, and 3D visualization, which generate detailed brain models and minimize human error.<br><br>Neuro Segmenter 3D accelerates the analysis of large datasets, aiding in the study of brain structure and function. Clinically, it assists in diagnosing and planning treatment for neurological disorders like Alzheimer's disease, brain tumors, and stroke, enhancing diagnostic accuracy and patient outcomes. For surgical planning, it offers detailed models that help localize critical structures and reduce surgical risks. By improving the efficiency and precision of brain image analysis, Neuro Segmenter 3D aims to advance the understanding, diagnosis, and treatment of neurological conditions, ultimately benefiting both medical research and patient care.<br><br><br></p>
+                    </div>
                 </div>
             </div>
-            <div class="py-5 p-lg-5">
-                <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
-                    <div class="col mb-5">
-                        <div class="card shadow-sm">
-                            <div class="card-body px-4 py-5 px-md-5">
-                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-database-gear text-success">
-                                        <path d="M12.096 6.223A4.92 4.92 0 0 0 13 5.698V7c0 .289-.213.654-.753 1.007a4.493 4.493 0 0 1 1.753.25V4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16c.536 0 1.058-.034 1.555-.097a4.525 4.525 0 0 1-.813-.927C8.5 14.992 8.252 15 8 15c-1.464 0-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13h.027a4.552 4.552 0 0 1 0-1H8c-1.464 0-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10c.262 0 .52-.008.774-.024a4.525 4.525 0 0 1 1.102-1.132C9.298 8.944 8.666 9 8 9c-1.464 0-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777M3 4c0-.374.356-.875 1.318-1.313C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4"></path>
-                                        <path d="M11.886 9.46c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"></path>
-                                    </svg></div>
-                                <h5 class="fw-bold card-title">Input Data</h5>
-                                <p class="text-muted card-text mb-4">The AI model takes as input 3D models of brain scans, typically obtained through medical imaging techniques such as MRI (Magnetic Resonance Imaging) or CT (Computed Tomography) scans. These input models are volumetric representations of the brain.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+        </section>
+        <section id="why-us" class="why-us section">
+            <div class="container section-title" data-aos="fade-up">
+                <h2>3D Segmentation</h2>
+                <p>KEY COMPONENTS</p>
+            </div>
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-4 col-xl-6 col-xxl-6" data-aos="fade-right" data-aos-delay="100" style="text-align:center;">
+                        <div class="text-center card-item" style="text-align:center;"><span>Input Data</span>
+                            <h4></h4>
+                            <p>Input Data: The AI model takes as input 3D models of brain scans, typically obtained through medical imaging techniques such as MRI (Magnetic Resonance Imaging) or CT (Computed Tomography) scans. These input models are volumetric representations of the brain.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-5 col-xxl-6" data-aos="fade-left" data-aos-delay="100">
+                        <div class="text-center card-item"><span>Segmentation Algorithm</span>
+                            <h4></h4>
+                            <p>The core of the AI model is a segmentation algorithm that partitions the brain volume into multiple distinct regions or segments based on features such as intensity, texture, shape, or spatial location. This segmentation process utilizes machine learning techniques such as convolutional neural networks (CNNs), deep learning architectures, and traditional image processing algorithms.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-6 col-xxl-6" data-aos="fade-right" data-aos-delay="100" style="text-align:center;">
+                        <div class="text-center card-item"><span>Model Training</span>
+                            <h4></h4>
+                            <p>The segmentation algorithm is trained on a dataset of 57195 labeled brain scans, where each scan is manually annotated with ground truth segmentations. During training, the model learns to identify patterns and features indicative of different brain structures, enabling it to generalize to unseen data.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4 col-xl-5 col-xxl-6" data-aos="fade-left" data-aos-delay="300" style="text-align:center;">
+                        <div class="text-center card-item"><span>Output Generation</span>
+                            <p>Output Generation: Once trained, the AI model can automatically segment new 3D brain scans, producing multiple output models where different segments are highlighted. These segmented regions include the cortex, subcortical structures, ventricles, white matter tracts, and other anatomical or functional regions of interest.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="specials" class="specials section">
+            <div class="container section-title" data-aos="fade-up">
+                <p>Applications</p>
+            </div>
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <ul class="nav nav-tabs flex-column">
+                            <li class="nav-item"><a class="nav-link active show" data-bs-toggle="tab" href="#specials-tab-1"><strong>Clinical Diagnosis</strong></a></li>
+                            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#specials-tab-2"><strong>Surgical Planning</strong></a></li>
+                            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#specials-tab-3"><strong>Medical Education</strong></a></li>
+                            <li class="nav-item"></li>
+                            <li class="nav-item"></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-9 mt-4 mt-lg-0">
+                        <div class="tab-content">
+                            <div class="tab-pane active show" id="specials-tab-1">
+                                <div class="row">
+                                    <div class="col-lg-8 col-xxl-12 order-2 order-lg-1 details">
+                                        <h3 style="text-align:center;">Clinical Diagnosis</h3>
+                                        <p class="fst-italic" style="text-align:center;">Automated brain segmentation can aid in the diagnosis and treatment planning of neurological disorders and diseases, such as Alzheimer's disease, brain tumors, or stroke.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="specials-tab-2">
+                                <div class="row">
+                                    <div class="col-lg-8 col-xxl-12 order-2 order-lg-1 details">
+                                        <h3 style="text-align:center;">Surgical Planning</h3>
+                                        <p class="fst-italic" style="text-align:center;">Surgeons can use segmented brain models for preoperative planning and intraoperative navigation, helping to localize critical structures and minimize surgical risks.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="specials-tab-3">
+                                <div class="row">
+                                    <div class="col-lg-8 col-xxl-12 order-2 order-lg-1 details">
+                                        <h3 style="text-align:center;">Medical Education</h3>
+                                        <p class="fst-italic" style="text-align:center;">The segmented brain models can serve as educational tools for medical students, allowing them to study neuroanatomy and understand pathological changes in the brain.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col mb-5">
-                        <div class="card shadow-sm">
-                            <div class="card-body px-4 py-5 px-md-5">
-                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-archive-fill text-success">
-                                        <path d="M12.643 15C13.979 15 15 13.845 15 12.5V5H1v7.5C1 13.845 2.021 15 3.357 15zM5.5 7h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1M.8 1a.8.8 0 0 0-.8.8V3a.8.8 0 0 0 .8.8h14.4A.8.8 0 0 0 16 3V1.8a.8.8 0 0 0-.8-.8H.8z"></path>
-                                    </svg></div>
-                                <h5 class="fw-bold card-title">Segmentation Algorithm:</h5>
-                                <p class="text-muted card-text mb-4">The core of the AI model is a segmentation algorithm that partitions the brain volume into multiple distinct regions or segments based on features such as intensity, texture, shape, or spatial location. This segmentation process utilizes machine learning techniques such as convolutional neural networks (CNNs), deep learning architectures, and traditional image processing algorithms.</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact section">
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Questions</h2>
+                <p>How you can reach us</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" class="mb-5"><iframe style="border:0;width:100%;height:400px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.6727227373094!2d-95.76162082499391!3d29.931322823922596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8641298fb36bde9d%3A0x6a308e0947c1a88c!2s10707%20Mason%20Rd%2C%20Cypress%2C%20TX%2077433!5e0!3m2!1sen!2sus!4v1719005544468!5m2!1sen!2sus" frameborder="0" allowfullscreen=""></iframe></div>
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row gy-4">
+                    <div class="col-lg-4">
+                        <div class="d-flex info-item" data-aos="fade-up" data-aos-delay="300"><i class="flex-shrink-0 bi bi-geo-alt"></i>
+                            <div>
+                                <h3>Location</h3>
+                                <p>10707 Mason Rd, Cypress, TX 77433</p>
+                            </div>
+                        </div>
+                        <div class="d-flex info-item" data-aos="fade-up" data-aos-delay="400"><i class="flex-shrink-0 bi bi-telephone"></i>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+1 (832) 429 6095</p>
+                            </div>
+                        </div>
+                        <div class="d-flex info-item" data-aos="fade-up" data-aos-delay="500"><i class="flex-shrink-0 bi bi-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>arnavjain180@gmail.com</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col mb-4">
-                        <div class="card shadow-sm">
-                            <div class="card-body px-4 py-5 px-md-5">
-                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-person-arms-up text-success">
-                                        <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path>
-                                        <path d="m5.93 6.704-.846 8.451a.768.768 0 0 0 1.523.203l.81-4.865a.59.59 0 0 1 1.165 0l.81 4.865a.768.768 0 0 0 1.523-.203l-.845-8.451A1.492 1.492 0 0 1 10.5 5.5L13 2.284a.796.796 0 0 0-1.239-.998L9.634 3.84a.72.72 0 0 1-.33.235c-.23.074-.665.176-1.304.176-.64 0-1.074-.102-1.305-.176a.72.72 0 0 1-.329-.235L4.239 1.286a.796.796 0 0 0-1.24.998l2.5 3.216c.317.316.475.758.43 1.204Z"></path>
-                                    </svg></div>
-                                <h5 class="fw-bold card-title">Model Training</h5>
-                                <p class="text-muted card-text mb-4">&nbsp;The segmentation algorithm is trained on a dataset of 57195 labeled brain scans, where each scan is manually annotated with ground truth segmentations. During training, the model learns to identify patterns and features indicative of different brain structures, enabling it to generalize to unseen data.</p>
-                            </div>
-                        </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="footer">
+        <div class="container footer-top">
+            <div class="row gy-4">
+                <div class="col-md-6 col-lg-4 footer-about"><a class="d-flex align-items-center logo" href="index.html" style="text-decoration:none;"><span class="sitename" style="text-decoration:none;">Neuro Segmenter 3D</span></a>
+                    <div class="footer-contact pt-3">
+                        <p>10707 Mason Rd</p>
+                        <p>Cypress, TX 77433</p>
+                        <p class="mt-3"><strong>Phone:</strong><span>+1 (832) 429 6095</span></p>
+                        <p><strong>Email:</strong><span>arnavjain180@gmail.com</span></p>
                     </div>
-                    <div class="col mb-4">
-                        <div class="card shadow-sm">
-                            <div class="card-body px-4 py-5 px-md-5">
-                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-badge-3d-fill text-success">
-                                        <path d="M10.157 5.968h-.844v4.06h.844c1.116 0 1.621-.667 1.621-2.02 0-1.354-.51-2.04-1.621-2.04z"></path>
-                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm5.184 4.368c.646 0 1.055.378 1.06.9.008.537-.427.919-1.086.919-.598-.004-1.037-.325-1.068-.756H3c.03.914.791 1.688 2.153 1.688 1.24 0 2.285-.66 2.272-1.798-.013-.953-.747-1.38-1.292-1.432v-.062c.44-.07 1.125-.527 1.108-1.375-.013-.906-.8-1.57-2.053-1.565-1.31.005-2.043.734-2.074 1.67h1.103c.022-.391.383-.751.936-.751.532 0 .928.33.928.813.004.479-.383.835-.928.835h-.632v.914h.663zM8.126 11h2.189C12.125 11 13 9.893 13 7.985c0-1.894-.861-2.984-2.685-2.984H8.126z"></path>
-                                    </svg></div>
-                                <h5 class="fw-bold card-title">Output Generation</h5>
-                                <p class="text-muted card-text mb-4">Once trained, the AI model can automatically segment new 3D brain scans, producing multiple output models where different segments are highlighted. These segmented regions include the cortex, subcortical structures, ventricles, white matter tracts, and other anatomical or functional regions of interest.</p>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+                <div class="col-md-3 col-lg-2 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="OurModel.html">Our Model</a></li>
+                        <li><a href="References.html">References</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
-    <section>
-        <div class="container py-5">
-            <div class="row mb-5">
-                <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <h2 class="fw-bold">Applications</h2>
-                </div>
-            </div>
-            <div class="mx-auto" style="max-width: 900px;">
-                <div class="row row-cols-1 row-cols-md-2 d-flex justify-content-center">
-                    <div class="col mb-4">
-                        <div class="card bg-primary-light">
-                            <div class="card-body text-center px-4 py-5 px-md-5">
-                                <p class="fw-bold text-primary card-text mb-2">Clinical Diagnosis</p>
-                                <h5 class="fw-bold card-title mb-3">Automated brain segmentation can aid in the diagnosis and treatment planning of neurological disorders and diseases, such as Alzheimer's disease, brain tumors, or stroke.</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-4">
-                        <div class="card bg-secondary-light">
-                            <div class="card-body text-center px-4 py-5 px-md-5">
-                                <p class="fw-bold text-secondary card-text mb-2">Surgical Planning</p>
-                                <h5 class="fw-bold card-title mb-3">Surgeons can use segmented brain models for preoperative planning and intraoperative navigation, helping to localize critical structures and minimize surgical risks.</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 mb-4">
-                        <div class="card bg-info-light">
-                            <div class="card-body text-center px-4 py-5 px-md-5">
-                                <p class="fw-bold text-info card-text mb-2">Medical Education</p>
-                                <h5 class="fw-bold card-title mb-3">The segmented brain models can serve as educational tools for medical students, allowing them to study neuroanatomy and understand pathological changes in the brain.</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="py-5">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <p class="fw-bold text-success mb-2">Contacts</p>
-                    <h2 class="fw-bold">&nbsp; &nbsp;How you can reach us</h2>
-                </div>
-            </div>
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-6 col-xl-4">
-                    <div>
-                        <form class="p-3 p-xl-4" method="post">
-                            <div class="mb-3"><input class="form-control" type="text" id="name-1" name="name" placeholder="Name"></div>
-                            <div class="mb-3"><input class="form-control" type="email" id="email-1" name="email" placeholder="Email"></div>
-                            <div class="mb-3"><textarea class="form-control" id="message-1" name="message" rows="6" placeholder="Message"></textarea></div>
-                            <div><button class="btn btn-primary shadow d-block w-100" type="submit">Send </button></div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-md-4 col-xl-4 d-flex justify-content-center justify-content-xl-start">
-                    <div class="d-flex flex-wrap flex-md-column justify-content-md-start align-items-md-start h-100">
-                        <div class="d-flex align-items-center p-3">
-                            <div class="bs-icon-md bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-md"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-telephone">
-                                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
-                                </svg></div>
-                            <div class="px-2">
-                                <h6 class="fw-bold mb-0">Phone</h6>
-                                <p class="text-muted mb-0">+1 (832) 429 6095&nbsp;</p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center p-3">
-                            <div class="bs-icon-md bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-md"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-envelope">
-                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"></path>
-                                </svg></div>
-                            <div class="px-2">
-                                <h6 class="fw-bold mb-0">Email</h6>
-                                <p class="text-muted mb-0">arnavjain180@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center p-3">
-                            <div class="bs-icon-md bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-md"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-pin">
-                                    <path d="M4.146.146A.5.5 0 0 1 4.5 0h7a.5.5 0 0 1 .5.5c0 .68-.342 1.174-.646 1.479-.126.125-.25.224-.354.298v4.431l.078.048c.203.127.476.314.751.555C12.36 7.775 13 8.527 13 9.5a.5.5 0 0 1-.5.5h-4v4.5c0 .276-.224 1.5-.5 1.5s-.5-1.224-.5-1.5V10h-4a.5.5 0 0 1-.5-.5c0-.973.64-1.725 1.17-2.189A5.921 5.921 0 0 1 5 6.708V2.277a2.77 2.77 0 0 1-.354-.298C4.342 1.674 4 1.179 4 .5a.5.5 0 0 1 .146-.354zm1.58 1.408-.002-.001.002.001m-.002-.001.002.001A.5.5 0 0 1 6 2v5a.5.5 0 0 1-.276.447h-.002l-.012.007-.054.03a4.922 4.922 0 0 0-.827.58c-.318.278-.585.596-.725.936h7.792c-.14-.34-.407-.658-.725-.936a4.915 4.915 0 0 0-.881-.61l-.012-.006h-.002A.5.5 0 0 1 10 7V2a.5.5 0 0 1 .295-.458 1.775 1.775 0 0 0 .351-.271c.08-.08.155-.17.214-.271H5.14c.06.1.133.191.214.271a1.78 1.78 0 0 0 .37.282"></path>
-                                </svg></div>
-                            <div class="px-2">
-                                <h6 class="fw-bold mb-0">Location</h6>
-                                <p class="text-muted mb-0">10707 Mason Rd, Cypress, TX 77433</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer class="bg-dark"></footer>
-    <script src="{{ url_for('static', filename = 'js/bootstrap.min.js')}}"></script>
-    <script src="{{ url_for('static', filename = 'js/bold-and-dark.js')}}"></script>
+    </footer><a class="d-flex justify-content-center align-items-center scroll-top" href="#" id="scroll-top"><i class="bi bi-arrow-up-short"></i></a>
+    <script src="{{ url_for('static', filename='assets/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/bs-init.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/vendor/php-email-form/validate.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/vendor/aos/aos.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/vendor/glightbox/js/glightbox.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/vendor/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/filepond.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/js/aos.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/js/bs-init.js') }}"></script>
 </body>
 
 </html>

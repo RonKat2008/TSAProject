@@ -14,7 +14,6 @@ from skimage.util import montage
 from io import BytesIO
 import tempfile
 import requests
-
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'supersecretkey'
 app.config['UPLOAD_FOLDER'] = 'static/files'
@@ -65,36 +64,39 @@ def display_mask(img,mask):
     num  = 0
     for file in os.listdir():
         num += 1
-    file_name ="D:\TSAProjects\static\images\\prediction" + str(num) +".png"
+    file_name = app.config['UPLOADED_PHOTOS_DEST'] + "\\prediction.png"
     plt.savefig(file_name)
-    return "prediction" + str(num) + ".png"
+    return "prediction.png"
 
 
 class UploadFileForm(FlaskForm):
     file = FileField("File", validators=[InputRequired()])
     submit = SubmitField("Upload File")
 
-
-@app.route('/static/saved_preds/', methods=['GET'])
-def download():
+@app.route('/static/saved_preds', methods=['GET'])
+def download_file():
     nifti_img = mask_to_nifti(true_mask)
-    return send_file(BytesIO(nifti_img.dataobj), as_attachment=True, download_name = "mask.bytes")
+    return send_file(BytesIO(nifti_img.dataobj), as_attachment=True, download_name = "mask.nii")
+
+@app.route('/static/images', methods=['GET'])
+def download_img():
+    return send_file(app.config['UPLOADED_PHOTOS_DEST'] + "\\prediction.png", as_attachment=True)
+
 
 @app.route('/static/images/<filename>')
 def get_file(filename):
     return send_from_directory(app.config['UPLOADED_PHOTOS_DEST'], filename)
 
 
-@app.route('/Project.html', methods=['GET',"POST"])
-def index():
+@app.route('/OurModel.html', methods=['GET',"POST"])
+def project():
     form = UploadFileForm()
     if form.validate_on_submit():
         file = form.file.data # First grab the file
         extension = os.path.splitext(file.filename)[1]
         if extension not in app.config['ALLOWED_EXTENSIONS']:
-            return render_template('Project.html', form = form, error = 'File is not a .nii file')
+            return render_template('OurModel.html', form = form, error = 'File is not a .nii file')
         #file.save(os.path.join(os.path.abspath(os.path.dirname(__file__)),app.config['UPLOAD_FOLDER'],secure_filename(file.filename))) # Then save the file
-        #file_name = "D:\TSAProjects\static\\files\\"+file.filename
         #file_name = "D:\TSAProjects\static\\files\\"+file.filename
         temp_dir = tempfile.mkdtemp()
         temp_file_path = os.path.join(temp_dir, file.filename)
@@ -105,26 +107,28 @@ def index():
         mask = mask_creation(img)
         name = display_mask(img,mask)
         file_url = url_for('get_file', filename = name)
-        download = True
+        download_file = True
+        download_img = True
     else:
         file_url = None
-        download = False
-    return render_template('Project.html', form=form, file_url = file_url, download = download)
+        download_file = False
+        download_img = False
+    return render_template('OurModel.html', form=form, file_url = file_url, download_file = download_file, download_img = download_img)
 
 
 
 @app.route('/', methods=['GET',"POST"])    
 @app.route('/index.html', methods=['GET',"POST"])
-def home():
+def index():
     return render_template('index.html')
 
-@app.route('/contacts.html', methods=['GET',"POST"])
-def contacts():
-    return render_template('contacts.html')
+@app.route('/About.html', methods=['GET',"POST"])
+def about():
+    return render_template('About.html')
 
-@app.route('/Datasets.html', methods=['GET',"POST"])
-def Datasets():
-    return render_template('Datasets.html')
+@app.route('/References.html', methods=['GET',"POST"])
+def References():
+    return render_template('References.html')
 
 if __name__ == '__main__':
     app.run(host = "0.0.0.0", port=5000)
