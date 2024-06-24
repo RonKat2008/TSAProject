@@ -95,6 +95,7 @@ def index():
             return render_template('Project.html', form = form, error = 'File is not a .nii file')
         #file.save(os.path.join(os.path.abspath(os.path.dirname(__file__)),app.config['UPLOAD_FOLDER'],secure_filename(file.filename))) # Then save the file
         #file_name = "D:\TSAProjects\static\\files\\"+file.filename
+        #file_name = "D:\TSAProjects\static\\files\\"+file.filename
         temp_dir = tempfile.mkdtemp()
         temp_file_path = os.path.join(temp_dir, file.filename)
         file.save(temp_file_path)
